@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模試データ移行ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>模試データ移行ツール</h1>
+        
+        <div class="shortcuts">
+            <span class="shortcut-text">ショートカット: Ctrl+Enter（Mac: ⌘+Enter）で行追加、Ctrl+Backspace（Mac: ⌘+Backspace）で行削除</span>
+        </div>
+        
+        <div class="controls">
+            <button id="outputBtn" class="btn btn-primary">JSONをコピー</button>
+        </div>
+        
+        <div id="rowsContainer">
+            <div class="row" data-index="0">
+                <select class="input-field select-field" data-field="subject">
+                    <option value="">科目を選択</option>
+                </select>
+                <input type="text" class="input-field" placeholder="模試の種類" data-field="kind">
+                <input type="number" class="input-field" placeholder="年度" data-field="year" min="0">
+                <input type="number" class="input-field" placeholder="大問数" data-field="count" min="0">
+                <button class="btn btn-remove" onclick="removeRow(this)">削除</button>
+            </div>
+        </div>
+        
+        <button id="addRowBtn" class="btn btn-add">+ 行を追加</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
